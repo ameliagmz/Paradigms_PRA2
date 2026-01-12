@@ -13,11 +13,11 @@ pip install -r requirements_part1.txt
 pip install -r requirements_part2.txt
 ```
 
-Part 1: Core libraries for the Matrix Game (Task 1), including numpy, gymnasium, and matplotlib.
+Part 1: Core libraries for the Prisoner's Dilemma (Task 1), including `numpy`, `gymnasium`, and `matplotlib`.
 
-Part 2: Libraries for the Gridworld (Task 2), including lbforaging, imageio, and pyglet.
+Part 2: Libraries for the LBF (Task 2), including `lbforaging`, `imageio`, and `pyglet`.
 
-Note: If lbforaging is not found via pip, you may need to install it directly from the Level-Based Foraging repository.
+Note: If `lbforaging` is not found via pip, you may need to install it directly from the [Level-Based Foraging repository](https://github.com/semitable/lb-foraging).
 
 ## 📂 Project Structure
 The codebase is organized by task, sharing common utilities where appropriate.
@@ -34,10 +34,10 @@ The codebase is organized by task, sharing common utilities where appropriate.
 ```
 
 ## 🕹️ Task 1: Iterated Prisoner's Dilemma
-This task compares agents in a classic matrix game to test their ability to cooperate. The environment logic is defined in matrix_game.py.
+This task compares agents in a classic matrix game to test their ability to cooperate. The environment logic is defined in `matrix_game.py`.
 
 ### 1. Independent Q-Learning (IQL)
-The IQL class is imported from iql.py. This script trains the agent to play the game and automatically generates evaluation plots.
+The IQL class is imported from `iql.py`. This script trains the agent to play the game and automatically generates evaluation plots.
 
 ```
 python train_iql.py
@@ -51,13 +51,13 @@ python train_cql.py
 ```
 
 #### Outputs:
-Both scripts utilize utils.py to generate and display plots showing training convergence and evaluation returns.
+Both scripts utilize `utils.py` to generate and display plots showing training convergence and evaluation returns.
 
 ## 🍎 Task 2: Level-Based Foraging (LBF)
-This task tests the agents in a gridworld environment where they must coordinate to collect food. The implementation uses a specific tabular approach adapted for the larger LBF state space, with modifications to handle partial observability.
+This task tests the agents in a gridworld environment where they must coordinate to collect food. The implementation uses the same IQL and CQL definitions, with modifications to handle the LBF data format.
 
 #### Running the Experiment
-The file lbf.py is self-contained. It includes:
+The file `lbf.py` is self-contained. It includes:
 - The modified IQL and CQL class definitions for gridworlds.
 - The main training loop.
 - Visualization and video recording logic.
@@ -69,7 +69,7 @@ python lbf.py
 ```
 
 #### Configuration
-You can toggle the environment difficulty (e.g., whether agents must lift food together or can forage alone) by modifying the COOPERATION constant at the top of lbf.py.
+You can toggle the environment difficulty (e.g., whether agents must lift food together or can forage alone) by modifying the COOPERATION constant inside the main function of `lbf.py`.
 
 ```
 # Inside lbf.py
