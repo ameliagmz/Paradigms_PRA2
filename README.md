@@ -8,10 +8,11 @@ The project aims to demonstrate the differences in coordination and scalability 
 
 The dependencies for this project are split into two parts. You can install them using the provided text files:
 
-```bash
+'''
 pip install -r requirements_part1.txt
 pip install -r requirements_part2.txt
 Part 1: Core libraries for the Matrix Game (Task 1), including numpy, gymnasium, and matplotlib.
+'''
 
 Part 2: Libraries for the Gridworld (Task 2), including lbforaging, imageio, and pyglet.
 
