@@ -13,9 +13,8 @@ pip install -r requirements_part1.txt
 pip install -r requirements_part2.txt
 ```
 
-Part 1: Core libraries for the Prisoner's Dilemma (Task 1), including `numpy`, `gymnasium`, and `matplotlib`.
-
-Part 2: Libraries for the LBF (Task 2), including `lbforaging`, `imageio`, and `pyglet`.
+- Part 1: Core libraries for the Prisoner's Dilemma (Task 1), including `numpy`, `gymnasium`, and `matplotlib`.
+- Part 2: Libraries for the LBF (Task 2), including `lbforaging`, `imageio`, and `pyglet`.
 
 Note: If `lbforaging` is not found via pip, you may need to install it directly from the [Level-Based Foraging repository](https://github.com/semitable/lb-foraging).
 
@@ -37,14 +36,14 @@ The codebase is organized by task, sharing common utilities where appropriate.
 This task compares agents in a classic matrix game to test their ability to cooperate. The environment logic is defined in `matrix_game.py`.
 
 ### 1. Independent Q-Learning (IQL)
-The IQL class is imported from `iql.py`. This script trains the agent to play the game and automatically generates evaluation plots.
+The `IQL` class is imported from `iql.py`. This script trains the agent to play the game and automatically generates evaluation plots.
 
 ```
 python train_iql.py
 ```
 
 ### 2. Centralized Q-Learning (CQL)
-For this task, the CQL class is defined directly within the training script. This agent uses a single joint Q-table to optimize the total team reward.
+For this task, the `CQL` class is defined directly within the training script. This agent uses a single joint Q-table to optimize the total team reward.
 
 ```
 python train_cql.py
@@ -69,7 +68,7 @@ python lbf.py
 ```
 
 #### Configuration
-You can toggle the environment difficulty (e.g., whether agents must lift food together or can forage alone) by modifying the COOPERATION constant inside the main function of `lbf.py`.
+You can toggle the environment difficulty (e.g., whether agents must lift food together or can forage alone) by modifying the `COOPERATION` constant inside the main function of `lbf.py`.
 
 ```
 # Inside lbf.py
@@ -82,4 +81,4 @@ COOPERATION = True
 #### Outputs:
 - Plots: A graph comparing the Mean Episode Returns of IQL vs. CQL over time.
 - Logs: CSV files containing raw return data.
-- Video: A .gif (or .mp4) recording of the trained agents acting in the environment, saved to the working directory.
+- Video: A `.gif` recording of the trained agents acting in the environment, saved to the working directory.
